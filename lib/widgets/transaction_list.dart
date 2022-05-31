@@ -22,24 +22,22 @@ class TransactionList extends StatelessWidget {
                     margin: const EdgeInsets.symmetric(
                         vertical: 10, horizontal: 10),
                     decoration: BoxDecoration(
-                        border: Border.all(color: Colors.black, width: 2)),
+                        border: Border.all(
+                            color: Theme.of(context).primaryColor, width: 2)),
                     padding: const EdgeInsets.all(10),
                     child: Text(
                       '\$${transactions[index].amount.toStringAsFixed(2)}',
                       style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
-                        color: Color.fromARGB(255, 6, 4, 7),
+                        color: Colors.purple,
                       ),
                     )),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      transactions[index].title,
-                      style: const TextStyle(
-                          fontSize: 18, fontWeight: FontWeight.bold),
-                    ),
+                    Text(transactions[index].title,
+                        style: Theme.of(context).textTheme.titleSmall),
                     Text(
                       DateFormat('d-M-y').format(transactions[index].date),
                       style: const TextStyle(

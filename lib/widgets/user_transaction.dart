@@ -24,6 +24,8 @@ class _UserTransactionsState extends State<UserTransactions> {
   ];
 
   void _addNewTransaction(String txTitle, double txAmount) {
+    print("Check");
+
     final newTx = Transaction(
         id: DateTime.now().toString(),
         title: txTitle,
